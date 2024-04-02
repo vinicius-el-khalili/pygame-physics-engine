@@ -10,7 +10,6 @@ title = 'Stuffy stuffs'
 #width = 1350
 #height = 600
 fps = 120
-global gravity
 gravity = .02
 #COLORS
 white = (255,255,255)
@@ -139,23 +138,23 @@ class Player(pg.sprite.Sprite):
                 self.r.x = 0 - self.rect.width/2
                 self.rect.center = self.r
                 self.offset.x += xtiles
-                self.world.build_level()
+                #self.world.build_level()
             if (self.r.x+self.rect.width/2<0):
                 self.r.x = width + self.rect.width/2
                 self.rect.center = self.r
                 self.offset.x -= xtiles
-                self.world.build_level()
+                #self.world.build_level()
             if (self.r.y-self.rect.height/2>height):
                 self.r.y = 0 - self.rect.height/2
                 self.rect.center = self.r
                 self.offset.y += ytiles
-                self.world.build_level()
+                #self.world.build_level()
             if (self.r.y+self.rect.height/2<0):
                 self.r.y = height + self.rect.height/2
                 self.rect.center = self.r
                 self.offset.y -= ytiles
-                self.world.build_level()
-        print(self.offset)
+                #self.world.build_level()
+        #print(self.offset)
     # particle class
 class particle(pg.sprite.Sprite):
     def __init__(self,world,player,c=None,direction=None,max_size=5):
